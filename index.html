@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay State Engineering - Professional Engineering Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span>Bay State</span> <span class="logo-accent">Engineering</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Innovative Engineering Solutions</h1>
+            <p>Transforming complex challenges into elegant engineering solutions</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🖨️</div>
+                <h3>CAD & 3D Printing</h3>
+                <p>Professional 3D modeling, prototyping, and additive manufacturing solutions for your product development needs.</p>
+                <a href="cad-3d-printing.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Software Integration & Programming</h3>
+                <p>Custom software development, system integration, and automation to streamline your business processes.</p>
+                <a href="software-integration.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>General IT Support</h3>
+                <p>Comprehensive IT infrastructure management, troubleshooting, and support services for your organization.</p>
+                <a href="it-support.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Custom Engineering System Development</h3>
+                <p>End-to-end design and implementation of specialized engineering systems tailored to your unique requirements.</p>
+                <a href="custom-systems.html" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Bay State Engineering</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Excellence in Engineering</h2>
+                <p>Bay State Engineering is a premier engineering firm dedicated to delivering innovative solutions across multiple disciplines. With a team of experienced professionals, we combine technical expertise with creative problem-solving to tackle the most challenging projects.</p>
+                <p>Our commitment to quality, precision, and customer satisfaction has made us a trusted partner for businesses seeking reliable engineering services. From concept to completion, we're with you every step of the way.</p>
+                <p>Whether you need rapid prototyping, custom software solutions, or comprehensive IT infrastructure, Bay State Engineering has the expertise and resources to bring your vision to life.</p>
+            </div>
+            <div class="about-features">
+                <h3>Why Choose Us?</h3>
+                <ul>
+                    <li>Experienced multidisciplinary team</li>
+                    <li>State-of-the-art technology and tools</li>
+                    <li>Customized solutions for every project</li>
+                    <li>Competitive pricing and fast turnaround</li>
+                    <li>Exceptional customer service</li>
+                    <li>Proven track record of success</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>info@baystateeng.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📱</div>
+                    <h3>Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Somerville, MA</p>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <input type="text" id="service" name="service" placeholder="e.g., CAD Design, Software Development">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bay State Engineering</h3>
+                <p>Professional engineering solutions for the modern world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="cad-3d-printing.html">CAD & 3D Printing</a></li>
+                    <li><a href="software-integration.html">Software Integration</a></li>
+                    <li><a href="it-support.html">IT Support</a></li>
+                    <li><a href="custom-systems.html">Custom Systems</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bay State Engineering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
