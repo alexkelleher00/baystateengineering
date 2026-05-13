@@ -104,10 +104,11 @@ function animateCounter(el) {
   requestAnimationFrame(update);
 }
 
-// Detect % suffix from data-count context
+// Detect % suffix from sibling label text
 counters.forEach(el => {
   const label = el.nextElementSibling?.textContent || '';
-  if (label.includes('%')) el.dataset.suffix = '%';
+  if (label.toLowerCase().includes('%') || label.toLowerCase().includes('percent'))
+    el.dataset.suffix = '%';
 });
 
 // ── Contact form ──────────────────────────────────────────────────────────────
