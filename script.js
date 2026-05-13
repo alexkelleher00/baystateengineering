@@ -1,126 +1,150 @@
-// Smooth scrolling for anchor links
+// ── Navbar scroll state ───────────────────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+
+function updateNavbar() {
+  if (window.scrollY > 40) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+}
+
+window.addEventListener('scroll', updateNavbar, { passive: true });
+updateNavbar();
+
+// ── Mobile hamburger menu ─────────────────────────────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+// Close menu on nav link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+// ── Smooth anchor scrolling ───────────────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
-    });
-});
-
-// Form submission handler
-function handleSubmit(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const formData = new FormData(form);
-    
-    // Get form values
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const service = formData.get('service');
-    const message = formData.get('message');
-    
-    // Here you would typically send this to a server
-    // For now, we'll just show a success message
-    alert(`Thank you, ${name}! Your message has been received. We'll contact you at ${email} soon.`);
-    
-    // Reset the form
-    form.reset();
-    
-    // In a real application, you would send this data to your backend:
-    /*
-    fetch('your-backend-endpoint', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: name,
-            email: email,
-            service: service,
-            message: message
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert('Thank you! Your message has been sent.');
-        form.reset();
-    })
-    .catch(error => {
-        alert('Sorry, there was an error sending your message. Please try again.');
-        console.error('Error:', error);
-    });
-    */
-}
-
-// Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe service cards and other elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.service-card, .project-card, .offering-item');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
-
-// Mobile menu toggle (if you want to add a hamburger menu later)
-function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-}
-
-// Add active class to current page in navigation
-document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
-    navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href').split('#')[0];
-        if (linkPage === currentPage) {
-            link.style.backgroundColor = 'var(--vt-orange)';
-        }
-    });
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const scrolled = window.pageYOffset;
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+  anchor.addEventListener('click', e => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = navbar.offsetHeight + 16;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
     }
+  });
 });
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
+// ── Service tabs ──────────────────────────────────────────────────────────────
+const tabBtns   = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabPanels.forEach(p => p.classList.remove('active'));
+
+    btn.classList.add('active');
+    const panel = document.getElementById('tab-' + target);
+    if (panel) panel.classList.add('active');
+  });
 });
+
+// ── Scroll animations (Intersection Observer) ─────────────────────────────────
+const fadeEls = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+fadeEls.forEach(el => observer.observe(el));
+
+// ── Animated counters ─────────────────────────────────────────────────────────
+const counters = document.querySelectorAll('[data-count]');
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(el => counterObserver.observe(el));
+
+function animateCounter(el) {
+  const target   = parseInt(el.dataset.count, 10);
+  const suffix   = el.dataset.suffix || (el.textContent.includes('%') ? '%' : '');
+  const duration = 1800;
+  const start    = performance.now();
+
+  function update(now) {
+    const elapsed  = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased    = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+
+  requestAnimationFrame(update);
+}
+
+// Detect % suffix from data-count context
+counters.forEach(el => {
+  const label = el.nextElementSibling?.textContent || '';
+  if (label.includes('%')) el.dataset.suffix = '%';
+});
+
+// ── Contact form ──────────────────────────────────────────────────────────────
+const contactForm  = document.getElementById('contactForm');
+const formSuccess  = document.getElementById('formSuccess');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('[type="submit"]');
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled    = true;
+
+    // Simulate send (replace with real endpoint when ready)
+    setTimeout(() => {
+      contactForm.style.display = 'none';
+      formSuccess.style.display = 'block';
+    }, 900);
+  });
+}
+
+// ── Active nav link highlight on scroll ──────────────────────────────────────
+const sections  = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function highlightNav() {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - navbar.offsetHeight - 60) {
+      current = section.id;
+    }
+  });
+
+  navAnchors.forEach(a => {
+    a.style.fontWeight = a.getAttribute('href') === '#' + current ? '700' : '';
+  });
+}
+
+window.addEventListener('scroll', highlightNav, { passive: true });

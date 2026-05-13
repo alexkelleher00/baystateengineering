@@ -1,168 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bay State Engineering - Professional Engineering Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bay State New Business | Restaurant Advisory Services</title>
+  <meta name="description" content="Practical, independent advisory services for independent restaurants in Massachusetts. Digital presence, competitive positioning, and operations — at a price point built for small businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <span>Bay State</span> <span class="logo-accent">Engineering</span>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-main">Bay State New Business</span>
+        <span class="logo-sub">Restaurant Advisory Services</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#who">Who We Serve</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#team">Team</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn btn-orange btn-sm">Get in Touch</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Massachusetts · Independent Restaurants Only
+      </div>
+
+      <h1 class="hero-title">
+        Expert guidance for<br>
+        <em>independent restaurants</em>
+      </h1>
+
+      <p class="hero-sub">
+        We help Massachusetts restaurants improve their digital presence, competitive positioning, and operations — at a price point built for small businesses.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-orange btn-lg">Get Your Assessment</a>
+        <a href="#results" class="btn btn-ghost btn-lg">See Our Results</a>
+      </div>
+
+      <hr class="hero-divider" />
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">$1,000</div>
+          <div class="hero-stat-label">Core Assessment starting price</div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Innovative Engineering Solutions</h1>
-            <p>Transforming complex challenges into elegant engineering solutions</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
+        <div>
+          <div class="hero-stat-num">5 wks</div>
+          <div class="hero-stat-label">From first call to full report</div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="container">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🖨️</div>
-                <h3>CAD & 3D Printing</h3>
-                <p>Professional 3D modeling, prototyping, and additive manufacturing solutions for your product development needs.</p>
-                <a href="cad-3d-printing.html" class="service-link">Learn More →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">💻</div>
-                <h3>Software Integration & Programming</h3>
-                <p>Custom software development, system integration, and automation to streamline your business processes.</p>
-                <a href="software-integration.html" class="service-link">Learn More →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🛠️</div>
-                <h3>General IT Support</h3>
-                <p>Comprehensive IT infrastructure management, troubleshooting, and support services for your organization.</p>
-                <a href="it-support.html" class="service-link">Learn More →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3>Custom Engineering System Development</h3>
-                <p>End-to-end design and implementation of specialized engineering systems tailored to your unique requirements.</p>
-                <a href="custom-systems.html" class="service-link">Learn More →</a>
-            </div>
+        <div>
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">Independent restaurants served</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2 class="section-title">About Bay State Engineering</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h2>Excellence in Engineering</h2>
-                <p>Bay State Engineering is a premier engineering firm dedicated to delivering innovative solutions across multiple disciplines. With a team of experienced professionals, we combine technical expertise with creative problem-solving to tackle the most challenging projects.</p>
-                <p>Our commitment to quality, precision, and customer satisfaction has made us a trusted partner for businesses seeking reliable engineering services. From concept to completion, we're with you every step of the way.</p>
-                <p>Whether you need rapid prototyping, custom software solutions, or comprehensive IT infrastructure, Bay State Engineering has the expertise and resources to bring your vision to life.</p>
-            </div>
-            <div class="about-features">
-                <h3>Why Choose Us?</h3>
-                <ul>
-                    <li>Experienced multidisciplinary team</li>
-                    <li>State-of-the-art technology and tools</li>
-                    <li>Customized solutions for every project</li>
-                    <li>Competitive pricing and fast turnaround</li>
-                    <li>Exceptional customer service</li>
-                    <li>Proven track record of success</li>
-                </ul>
-            </div>
+<!-- ── Services ───────────────────────────────────────────────────────────── -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Everything your restaurant needs to compete</h2>
+      <p class="section-subtitle">We customize our scope for each client. Every engagement starts with an honest conversation about where you actually need help.</p>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="assessment">
+        <span class="tab-icon">🔍</span> Core Assessment
+      </button>
+      <button class="tab-btn" data-tab="digital">
+        <span class="tab-icon">💻</span> Digital Implementation
+      </button>
+      <button class="tab-btn" data-tab="maintenance">
+        <span class="tab-icon">🔧</span> Continued Maintenance
+      </button>
+    </div>
+
+    <!-- Assessment Tab -->
+    <div class="tab-panel active" id="tab-assessment">
+      <div class="tab-intro">
+        <div>
+          <h3>A thorough look at your entire operation</h3>
+          <p>The Core Assessment is our flagship offering. We look at your restaurant from every angle — the way a customer, a competitor, and an operator all would — and deliver a written report with phased, costed, actionable recommendations.</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>info@baystateeng.com</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📱</div>
-                    <h3>Phone</h3>
-                    <p>(555) 123-4567</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📍</div>
-                    <h3>Location</h3>
-                    <p>Somerville, MA</p>
-                </div>
-            </div>
-
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interest</label>
-                    <input type="text" id="service" name="service" placeholder="e.g., CAD Design, Software Development">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+        <div class="tab-intro-stat">
+          <div class="big">$1,000–$1,500</div>
+          <small>All-in price. Report delivered within 45 days of your on-site visit.</small>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Bay State Engineering</h3>
-                <p>Professional engineering solutions for the modern world.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="cad-3d-printing.html">CAD & 3D Printing</a></li>
-                    <li><a href="software-integration.html">Software Integration</a></li>
-                    <li><a href="it-support.html">IT Support</a></li>
-                    <li><a href="custom-systems.html">Custom Systems</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+      </div>
+      <div class="service-grid">
+        <div class="service-card fade-up stagger-1">
+          <div class="service-card-icon">🚶</div>
+          <h4>On-Site Evaluation</h4>
+          <p>We walk your restaurant — front of house, kitchen, storage — and assess the full customer and operational environment, inside and out.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Bay State Engineering. All rights reserved.</p>
+        <div class="service-card fade-up stagger-2">
+          <div class="service-card-icon">🌐</div>
+          <h4>Digital Presence Review</h4>
+          <p>We audit your website, Google Business Profile, Apple Maps, and every major platform for gaps, inconsistencies, and missed opportunities.</p>
         </div>
-    </footer>
+        <div class="service-card fade-up stagger-3">
+          <div class="service-card-icon">⭐</div>
+          <h4>Online Reputation Review</h4>
+          <p>We analyze reviews across all platforms, identify recurring themes, and develop a concrete strategy to improve your rating and respond effectively.</p>
+        </div>
+        <div class="service-card fade-up stagger-4">
+          <div class="service-card-icon">📊</div>
+          <h4>Competitive Positioning</h4>
+          <p>We map your competition, assess your position relative to nearby alternatives, and identify opportunities to stand out in your market.</p>
+        </div>
+        <div class="service-card fade-up stagger-5">
+          <div class="service-card-icon">💰</div>
+          <h4>Cost &amp; Spend Analysis</h4>
+          <p>We dig into your purchasing, supplier relationships, and recurring spend to identify savings opportunities and highlight inefficiencies.</p>
+        </div>
+        <div class="service-card fade-up stagger-6">
+          <div class="service-card-icon">📱</div>
+          <h4>Technology &amp; Systems Review</h4>
+          <p>We assess your POS, online ordering, delivery platforms, and other systems — and identify where technology could meaningfully help your operation.</p>
+        </div>
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Digital Tab -->
+    <div class="tab-panel" id="tab-digital">
+      <div class="tab-intro">
+        <div>
+          <h3>Build or fix your digital foundation</h3>
+          <p>If your assessment surfaces digital gaps — or if you already know your online presence needs work — we can implement the solutions directly. No middlemen, no handoffs. Alex builds it himself.</p>
+        </div>
+        <div class="tab-intro-stat">
+          <div class="big">$1,000–$2,000</div>
+          <small>Scope agreed in writing before any work begins. Third-party costs passed through at cost.</small>
+        </div>
+      </div>
+      <div class="service-grid">
+        <div class="service-card fade-up stagger-1">
+          <div class="service-card-icon">🖥️</div>
+          <h4>Website Development</h4>
+          <p>A clean, fast, mobile-optimized website that represents your restaurant well and helps customers find, trust, and choose you.</p>
+        </div>
+        <div class="service-card fade-up stagger-2">
+          <div class="service-card-icon">📍</div>
+          <h4>Online Presence Setup</h4>
+          <p>Google Business Profile, Apple Maps, Yelp, and every platform — fully set up, accurate, consistent, and optimized to be found.</p>
+        </div>
+        <div class="service-card fade-up stagger-3">
+          <div class="service-card-icon">🔗</div>
+          <h4>Application Integration</h4>
+          <p>Connect your ordering systems, reservation tools, POS, and delivery platforms so everything works together without manual workarounds.</p>
+        </div>
+        <div class="service-card fade-up stagger-4">
+          <div class="service-card-icon">📸</div>
+          <h4>Photography Coordination</h4>
+          <p>We'll help coordinate and direct photography to give your digital presence the visual quality that converts browsers into diners.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maintenance Tab -->
+    <div class="tab-panel" id="tab-maintenance">
+      <div class="tab-intro">
+        <div>
+          <h3>Keep everything current without lifting a finger</h3>
+          <p>Once your digital presence is in order, we can maintain it on an ongoing basis — so your hours, menu, photos, and profiles stay accurate, and your website stays working.</p>
+        </div>
+        <div class="tab-intro-stat">
+          <div class="big">$50–$150<span style="font-size:1rem;font-weight:400">/mo</span></div>
+          <small>Month-to-month. Cancel any time. Scope agreed in writing.</small>
+        </div>
+      </div>
+      <div class="service-grid">
+        <div class="service-card fade-up stagger-1">
+          <div class="service-card-icon">✏️</div>
+          <h4>Website Updating</h4>
+          <p>Menu changes, hours updates, seasonal content, new photos — we handle all updates to keep your site accurate and fresh.</p>
+        </div>
+        <div class="service-card fade-up stagger-2">
+          <div class="service-card-icon">🗺️</div>
+          <h4>Digital Presence Upkeep</h4>
+          <p>We monitor and update your Google, Apple Maps, Yelp, and other platform listings so your information is always correct.</p>
+        </div>
+        <div class="service-card fade-up stagger-3">
+          <div class="service-card-icon">⚙️</div>
+          <h4>Application Monitoring</h4>
+          <p>We keep an eye on your integrations and configurations — catching and fixing issues before they affect your guests or your operation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Process ─────────────────────────────────────────────────────────────── -->
+<section id="process" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">From first call to full report in five weeks</h2>
+      <p class="section-subtitle">Our process is straightforward and transparent. No surprises, no scope creep — everything is agreed in writing before we begin.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step fade-up stagger-1">
+        <div class="step-circle active-step"><span>1</span></div>
+        <div class="week-tag">Week 0</div>
+        <h4>Initial Conversation</h4>
+        <p>We talk about your restaurant, your priorities, and whether we're a good fit. No commitment required.</p>
+      </div>
+      <div class="process-step fade-up stagger-2">
+        <div class="step-circle active-step"><span>2</span></div>
+        <div class="week-tag">Week 0</div>
+        <h4>Scope &amp; Signing</h4>
+        <p>We agree on the exact components included and excluded, set a fixed fee, and sign before any work begins.</p>
+      </div>
+      <div class="process-step fade-up stagger-3">
+        <div class="step-circle active-step"><span>3</span></div>
+        <div class="week-tag">Week 1</div>
+        <h4>On-Site Visit</h4>
+        <p>We come to your restaurant, walk through everything, and spend real time understanding your environment.</p>
+      </div>
+      <div class="process-step fade-up stagger-4">
+        <div class="step-circle active-step"><span>4</span></div>
+        <div class="week-tag">Weeks 1–5</div>
+        <h4>Research &amp; Analysis</h4>
+        <p>We review your digital presence, competitive landscape, reputation, and any other agreed scope components in depth.</p>
+      </div>
+      <div class="process-step fade-up stagger-5">
+        <div class="step-circle orange-step"><span>5</span></div>
+        <div class="week-tag">Week 5</div>
+        <h4>Report Delivery</h4>
+        <p>We deliver a written report with phased, costed recommendations — then walk through it with you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Results ─────────────────────────────────────────────────────────────── -->
+<section id="results" class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Results</span>
+      <h2 class="section-title">Real improvements for real restaurants</h2>
+      <p class="section-subtitle">The kind of issues we find — and help fix — are the ones that quietly cost you customers every day.</p>
+    </div>
+
+    <div class="impact-stats">
+      <div class="impact-stat fade-up stagger-1">
+        <div class="impact-num" data-count="3">0</div>
+        <div class="impact-label">platforms where most restaurants have incorrect information</div>
+      </div>
+      <div class="impact-stat fade-up stagger-2">
+        <div class="impact-num" data-count="60">0</div>
+        <div class="impact-label">% of diners check reviews before choosing a restaurant</div>
+      </div>
+      <div class="impact-stat fade-up stagger-3">
+        <div class="impact-num" data-count="45">0</div>
+        <div class="impact-label">days or fewer to a complete written assessment</div>
+      </div>
+      <div class="impact-stat fade-up stagger-4">
+        <div class="impact-num" data-count="100">0</div>
+        <div class="impact-label">% of fees agreed in writing before work begins</div>
+      </div>
+    </div>
+
+    <h3 style="color: rgba(255,255,255,.7); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1.25rem;">Client Work</h3>
+
+    <div class="case-studies-grid">
+      <div class="case-card fade-up stagger-1">
+        <span class="case-tag tag-digital">Digital Presence</span>
+        <h3>Somerville neighborhood restaurant — full digital overhaul</h3>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <span class="case-metric-val">4</span>
+            <span class="case-metric-lbl">platforms corrected</span>
+          </div>
+          <div class="case-metric">
+            <span class="case-metric-val">New</span>
+            <span class="case-metric-lbl">website launched</span>
+          </div>
+        </div>
+        <p>Inconsistent hours across Google, Apple Maps, Yelp, and the restaurant's own website were quietly turning away customers. We corrected every platform, launched a clean new site, and set up proper photo management.</p>
+      </div>
+
+      <div class="case-card fade-up stagger-2">
+        <span class="case-tag tag-review">Reputation</span>
+        <h3>Owner-operated restaurant — review strategy &amp; response system</h3>
+        <div class="case-metrics">
+          <div class="case-metric">
+            <span class="case-metric-val">0%</span>
+            <span class="case-metric-lbl">review response rate (before)</span>
+          </div>
+          <div class="case-metric">
+            <span class="case-metric-val">+47</span>
+            <span class="case-metric-lbl">reviews addressed</span>
+          </div>
+        </div>
+        <p>The owner had never responded to a single review — positive or negative. We analyzed the patterns, developed response templates, and built a simple system for the owner to maintain going forward.</p>
+      </div>
+
+      <div class="case-card case-placeholder-card fade-up stagger-3">
+        <div class="ph-icon">📋</div>
+        <h3 style="color: rgba(255,255,255,.4);">Your restaurant here</h3>
+        <p>We're actively taking on new clients. If your restaurant has room to improve — most do — we'd like to talk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Who We Work With ────────────────────────────────────────────────────── -->
+<section id="who" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Who We Work With</span>
+      <h2 class="section-title">Built for independent restaurants</h2>
+      <p class="section-subtitle">We work exclusively with single-location restaurants — owner-operated, family-run, and small partnerships. Not chains, groups, or franchises.</p>
+    </div>
+
+    <p style="margin-bottom: 1.75rem; font-size: .95rem; color: var(--text-muted);">Strong candidates for whom we can provide the most value typically have one or more of these characteristics:</p>
+
+    <div class="ideal-grid">
+      <div class="ideal-card fade-up stagger-1">
+        <div class="ideal-icon">✓</div>
+        <div>
+          <h4>Inconsistent or missing digital presence</h4>
+          <p>Your hours, address, or menu are wrong somewhere online — or you don't have a real web presence at all.</p>
+        </div>
+      </div>
+      <div class="ideal-card fade-up stagger-2">
+        <div class="ideal-icon">✓</div>
+        <div>
+          <h4>Unaddressed online reviews</h4>
+          <p>You have reviews — good or bad — sitting out there that you've never responded to.</p>
+        </div>
+      </div>
+      <div class="ideal-card fade-up stagger-3">
+        <div class="ideal-icon">✓</div>
+        <div>
+          <h4>Nearby restaurants attract more customers</h4>
+          <p>You know competitors with comparable (or worse) food are busier than you, and you're not sure why.</p>
+        </div>
+      </div>
+      <div class="ideal-card fade-up stagger-4">
+        <div class="ideal-icon">✓</div>
+        <div>
+          <h4>Good foot traffic, low conversion</h4>
+          <p>People walk by but don't come in — something about how you present yourself isn't landing.</p>
+        </div>
+      </div>
+      <div class="ideal-card fade-up stagger-5">
+        <div class="ideal-icon">✓</div>
+        <div>
+          <h4>Food quality outperforms the experience</h4>
+          <p>Your food is the best part of the meal, but the dining environment isn't living up to it.</p>
+        </div>
+      </div>
+      <div class="ideal-card fade-up stagger-6">
+        <div class="ideal-icon">✓</div>
+        <div>
+          <h4>No one is looking at the numbers</h4>
+          <p>Purchasing, suppliers, and recurring spend haven't been scrutinized — and there's likely savings to find.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pricing ─────────────────────────────────────────────────────────────── -->
+<section id="pricing" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Pricing</span>
+      <h2 class="section-title">Transparent pricing, no surprises</h2>
+      <p class="section-subtitle">Every fee is agreed in writing before work begins. Payment plans are available and negotiable. Third-party costs are passed through at cost — no markup.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card featured fade-up stagger-1">
+        <div class="pricing-best">Start Here</div>
+        <div class="pricing-icon">🔍</div>
+        <div class="pricing-name">Core Assessment</div>
+        <p class="pricing-desc">A comprehensive look at your restaurant across every component we offer. Delivered as a written report with phased, costed recommendations.</p>
+        <div class="pricing-amount">
+          <span class="pricing-from">Starting at</span>
+          <span class="pricing-num">$1,000</span>
+          <span class="pricing-per">– $1,500 depending on scope</span>
+        </div>
+        <ul class="pricing-features">
+          <li>On-site evaluation</li>
+          <li>Digital presence review</li>
+          <li>Online reputation review</li>
+          <li>Competitive positioning assessment</li>
+          <li>Cost &amp; spend analysis (optional)</li>
+          <li>Technology &amp; systems review</li>
+          <li>Written report with phased recommendations</li>
+          <li>Report walkthrough call included</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary form-submit">Start with an Assessment</a>
+      </div>
+
+      <div class="pricing-card fade-up stagger-2">
+        <div class="pricing-icon">💻</div>
+        <div class="pricing-name">Digital Implementation</div>
+        <p class="pricing-desc">Build or fix your digital foundation. Scoped after your assessment — or independently if you already know what you need.</p>
+        <div class="pricing-amount">
+          <span class="pricing-from">Starting at</span>
+          <span class="pricing-num">$1,000</span>
+          <span class="pricing-per">– $2,000 depending on scope</span>
+        </div>
+        <ul class="pricing-features">
+          <li>Website development</li>
+          <li>Online presence setup &amp; optimization</li>
+          <li>Application integration</li>
+          <li>Photography coordination</li>
+          <li>Scope agreed before any work begins</li>
+          <li>Third-party costs passed at cost</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary form-submit">Discuss Your Needs</a>
+      </div>
+
+      <div class="pricing-card fade-up stagger-3">
+        <div class="pricing-icon">🔧</div>
+        <div class="pricing-name">Continued Maintenance</div>
+        <p class="pricing-desc">Keep everything current without lifting a finger. Month-to-month, cancel any time.</p>
+        <div class="pricing-amount">
+          <span class="pricing-from">Starting at</span>
+          <span class="pricing-num">$50</span>
+          <span class="pricing-per">/month – up to $150/month</span>
+        </div>
+        <ul class="pricing-features">
+          <li>Website content updates</li>
+          <li>Platform listing maintenance</li>
+          <li>Application monitoring</li>
+          <li>Month-to-month commitment</li>
+          <li>Cancel any time</li>
+          <li>Scope agreed in writing</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary form-submit">Learn More</a>
+      </div>
+    </div>
+
+    <p class="pricing-note-top" style="margin-top: 1.5rem; text-align: center;">
+      Not sure what you need? Start with a conversation — it's free and there's no commitment.
+      <a href="#contact" style="color: var(--maroon); font-weight: 600; text-decoration: none;"> Get in touch →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ── Team ────────────────────────────────────────────────────────────────── -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Team</span>
+      <h2 class="section-title">A cross-functional perspective most restaurants don't have access to</h2>
+      <p class="section-subtitle">We're both from Massachusetts and living in the Boston area. Our backgrounds are in consulting and software engineering — neither of us comes from the restaurant industry, which is part of what makes our perspective valuable.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card fade-up stagger-1">
+        <div class="team-avatar">JB</div>
+        <h3 class="team-name">Jesse Brouillette</h3>
+        <div class="team-role">Principal Advisor</div>
+        <p class="team-bio">Jesse brings a structured analytical approach developed through top-tier consulting work in operations and cost management. He manages client relationships from the initial conversation through final report delivery, and leads all operational and financial components of our assessments.</p>
+        <span class="team-credential">🎓 MIT-trained consultant</span>
+      </div>
+
+      <div class="team-card fade-up stagger-2">
+        <div class="team-avatar">AK</div>
+        <h3 class="team-name">Alex Kelleher</h3>
+        <div class="team-role">Principal Advisor &amp; Digital Specialist</div>
+        <p class="team-bio">Alex is a software engineer specializing in website development, digital accessibility, and online presence. He evaluates and — where engaged — builds or fully overhauls websites and digital systems, with the ability to implement the full range of digital solutions for clients.</p>
+        <span class="team-credential">🎓 Virginia Tech · Software Engineer</span>
+      </div>
+
+      <div class="team-card fade-up stagger-3">
+        <div class="team-avatar">GB</div>
+        <h3 class="team-name">Gerry Bojanowski</h3>
+        <div class="team-role">Industry Advisor</div>
+        <p class="team-bio">Gerry's background spans restaurant ownership, commercial property, food supply, and building contracting — a view of the industry from nearly every angle. He founded The Oyster Company in Dennis, MA in 2005. His experience informs every assessment we conduct.</p>
+        <span class="team-credential">🦪 Founder, The Oyster Company (Dennis, MA)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ─────────────────────────────────────────────────────────────── -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Start with a conversation</h2>
+      <p class="section-subtitle">No commitment required. We'll talk about your restaurant, where you think there's room to improve, and whether we can help.</p>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-info-block">
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <h4>Email — Jesse</h4>
+            <a href="mailto:jqbrouillette@gmail.com">jqbrouillette@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <h4>Email — Alex</h4>
+            <a href="mailto:alexkelleher18@gmail.com">alexkelleher18@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <h4>Phone — Jesse</h4>
+            <a href="tel:+19789051475">(978) 905-1475</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <h4>Phone — Alex</h4>
+            <a href="tel:+19789922181">(978) 992-2181</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <h4>Location</h4>
+            <p>Boston area, Massachusetts<br>We serve restaurants throughout MA</p>
+          </div>
+        </div>
+
+        <div class="contact-team-note">
+          Either Jesse or Alex will respond within one business day. We're happy to answer any questions about scope, pricing, or what we've seen work for restaurants like yours.
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Send us a message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Owner name" required />
+            </div>
+            <div class="form-group">
+              <label for="restaurant">Restaurant Name</label>
+              <input type="text" id="restaurant" name="restaurant" placeholder="Your restaurant" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interest">What are you most interested in?</label>
+            <select id="interest" name="interest">
+              <option value="">Select one...</option>
+              <option value="assessment">Core Assessment</option>
+              <option value="digital">Digital Implementation</option>
+              <option value="maintenance">Continued Maintenance</option>
+              <option value="unsure">Not sure — just want to talk</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us a bit about your restaurant</label>
+            <textarea id="message" name="message" placeholder="Location, type of cuisine, what's on your mind..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Send Message →</button>
+          <div class="form-success" id="formSuccess">
+            ✓ Message sent! We'll be in touch within one business day.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-main">Bay State New Business</span>
+          <span class="logo-sub">Restaurant Advisory Services</span>
+        </div>
+        <p>Practical, independent advising for independent restaurants in Massachusetts. We help our neighbors build stronger, more competitive restaurants — at a price point built for small businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Core Assessment</a></li>
+          <li><a href="#services">Digital Implementation</a></li>
+          <li><a href="#services">Continued Maintenance</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#who">Who We Serve</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Bay State New Business. All rights reserved.</span>
+      <span>Massachusetts · Serving independent restaurants</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
