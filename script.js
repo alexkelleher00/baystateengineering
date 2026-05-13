@@ -111,23 +111,43 @@ counters.forEach(el => {
     el.dataset.suffix = '%';
 });
 
-// ── Contact form ──────────────────────────────────────────────────────────────
-const contactForm  = document.getElementById('contactForm');
-const formSuccess  = document.getElementById('formSuccess');
+// ── Contact form (Formspree) ──────────────────────────────────────────────────
+// Sign up at formspree.io, create a form, paste your endpoint below.
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mykovwqk';
+
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
 
     const submitBtn = contactForm.querySelector('[type="submit"]');
     submitBtn.textContent = 'Sending…';
     submitBtn.disabled    = true;
 
-    // Simulate send (replace with real endpoint when ready)
-    setTimeout(() => {
-      contactForm.style.display = 'none';
-      formSuccess.style.display = 'block';
-    }, 900);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method:  'POST',
+        headers: { 'Accept': 'application/json' },
+        body:    new FormData(contactForm),
+      });
+
+      if (res.ok) {
+        contactForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else {
+        const data = await res.json();
+        const msg  = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong.';
+        alert('Could not send message: ' + msg);
+        submitBtn.textContent = 'Send Message →';
+        submitBtn.disabled    = false;
+      }
+    } catch {
+      alert('Network error — please email us directly.');
+      submitBtn.textContent = 'Send Message →';
+      submitBtn.disabled    = false;
+    }
   });
 }
 
