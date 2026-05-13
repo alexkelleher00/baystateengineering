@@ -602,10 +602,22 @@
             <textarea id="message" name="message" placeholder="Location, type of cuisine, what's on your mind..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-lg form-submit">Send Message →</button>
-          <div class="form-success" id="formSuccess">
-            ✓ Message sent! We'll be in touch within one business day.
-          </div>
         </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="success-circle">
+            <svg class="success-svg" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="success-ring" cx="26" cy="26" r="24" stroke="#22c55e" stroke-width="2.5"/>
+              <polyline class="success-check" points="14,26 22,34 38,18" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="success-title">Message sent!</h3>
+          <p class="success-msg">We'll be in touch within one business day. In the meantime, feel free to reach out directly.</p>
+          <div class="success-contacts">
+            <a href="mailto:jqbrouillette@gmail.com">jqbrouillette@gmail.com</a>
+            <a href="mailto:alexkelleher18@gmail.com">alexkelleher18@gmail.com</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

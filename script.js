@@ -135,7 +135,7 @@ if (contactForm) {
 
       if (res.ok) {
         contactForm.style.display = 'none';
-        formSuccess.style.display = 'block';
+        formSuccess.style.display = 'flex';
       } else {
         const data = await res.json();
         const msg  = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong.';
